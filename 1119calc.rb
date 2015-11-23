@@ -51,7 +51,7 @@
 # opt = gets.strip
 # puts "input last number:"
 # num2 = gets.to_i
-
+# make a class with you math stuff in it
 
 @history = {}
 #=========================
@@ -226,7 +226,23 @@ end
 
 def priorequations
  puts "here are the prior equations"
- puts @history
+ @history.each do |k, v|
+  puts "#{k}: #{v} ="
+  prians = []
+  prians = v.split(' ')
+  num1 = prians[0].to_i
+  num2 = prians[2].to_i
+  opt = prians[1]
+  calculate(num1, opt, num2)
+
+
+  # if op == '+'
+  #   a + b
+  # puts "#{a}#{op}#{b}="
+  # puts a op
+ end
+
+
  #to bring back to repeat
  repeat
 
